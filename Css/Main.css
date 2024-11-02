@@ -1,0 +1,243 @@
+body{ 
+background-image:url(../image/Home.webp); 
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+}
+/* Start Of Nav Bar */
+/* N */
+.navbar .logo,.navbar .nav-link{
+    letter-spacing: 0.1875rem;
+    color:#fff;
+    transition: 0.6s;
+}
+.navbar .logo:hover,.navbar .nav-link:hover,.navbar .nav-link.active:hover{
+    letter-spacing: 0.2875rem;
+    color:gold;
+    text-shadow: 0.1875rem 0.1875rem 0.9375rem gold;
+}
+.navbar .nav-link{
+    font-size:1.375rem;
+    font-weight: 500;
+    color:#fff;
+}
+.navbar .nav-link.active{
+    color:#fff;
+}
+.navbar{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+}
+.navbar .navbar-toggler{
+border-color:#fff;
+}
+.navbar .navbar-toggler-icon{
+    background-color:#ffffff55;
+    border-radius: 0.625rem;
+}
+/* Start Of Header Section */
+header{
+    min-height:100vh;
+}
+header .container{
+    background-color:rgba(255, 255, 255, 0.1);
+    transition:0.8s;
+}
+header .container h1{
+    color:#000;
+    letter-spacing: 0.3125rem;
+    width:31.25rem;
+    margin:0 auto;
+    text-shadow: 0.0625rem 0.0625rem 0.625rem gold;
+}
+header .container:hover{
+    box-shadow:0.125rem 0.125rem 1.25rem 0.125rem gold;
+}
+header .search-tools input{
+    letter-spacing:0.1875rem;
+    transition: 0.8s;
+}
+header .search-tools input::placeholder{
+    color:#fff;
+}
+header .container button{
+    transition: 0.8s;
+    letter-spacing:0.1875rem;
+}
+header .container button:hover{
+    scale:1.1
+}
+header .form-control{
+    border-color:gold;
+    box-shadow: 2px 2px 15px 1px gold;
+}
+header .form-control:focus{
+    border-color:#fff;
+    box-shadow:none;
+}
+/* Start Of Contact Section */
+.contact{
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+.contact .inner-popular img{
+    transition: 0.8s;
+    height:18.75rem;
+    padding:1.25rem;
+}
+.contact .inner-popular{
+    transition: 0.7s;
+    border-radius: 1.875rem;
+    animation-name:animate__animated animate__flipInY;
+    animation-duration:1100ms;
+}
+.contact .inner-popular:hover{
+    box-shadow:0.125rem 0.125rem 1.25rem 0.125rem brown;
+    cursor: pointer;
+    scale:1.1;
+}
+ .contact .inner-popular .black-layer{ 
+    border-radius: 1.875rem;
+    width:100%;
+    height:18.75rem;
+    background-color:#000000cc;
+    position: absolute;
+    top:200%;
+    left:0;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:2.5rem;
+    letter-spacing: 0.5rem;
+    transition: 0.6s;
+} 
+.contact .inner-popular:hover .black-layer{
+    top:0;
+}
+
+.contact .inner-Details h4{
+letter-spacing: 0.1875rem;
+font-weight: 700;
+}
+.contact .inner-Details img{
+    transition: 0.8s;
+}
+.contact .inner-Details img:hover{
+    scale: 1.1;
+    cursor: pointer;
+}
+/* Bakc Button*/
+#back{
+    background-color:brown;
+    color:#fff;
+    transition: 0.8s;
+}
+#back:hover{
+    background-color:gold;
+    color:#000;
+    border-top-right-radius: 0rem !important;
+    border-bottom-right-radius: 0rem !important;
+    transform:translate(-2.5rem);
+}
+
+/* Circle Top */
+#Circle-Top{
+    position: fixed;
+    right:1.25rem;
+    bottom:1.25rem;
+    width:3.75rem;
+    height:3.75rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.8s;
+    animation-name:Top-Bottom;
+    animation-iteration-count: infinite;
+    animation-duration: 1000ms;
+}
+#Circle-Top:hover{
+box-shadow:0.125rem 0.125rem 5.25rem 1.425rem red;
+}
+@keyframes Top-Bottom{
+    0% {
+        bottom: 1.25rem;
+    }
+    50% {
+        bottom: 2rem;
+    }
+    100% {
+        bottom: 1.25rem; 
+    }
+}
+
+/* Loding-Screen */
+.loading-screen{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:#000000ee;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.loader {
+    position: relative;
+    width: 75px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#DDD 50px, transparent 0),
+                      linear-gradient(#DDD 50px, transparent 0),
+                      linear-gradient(#DDD 50px, transparent 0),
+                      linear-gradient(#DDD 50px, transparent 0),
+                      linear-gradient(#DDD 50px, transparent 0);
+    background-size: 8px 100%;
+    background-position: 0px 90px, 15px 78px, 30px 66px, 45px 58px, 60px 50px;
+    animation: pillerPushUp 4s linear infinite;
+  }
+  .loader:after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: #de3500;
+    border-radius: 50%;
+    animation: ballStepUp 4s linear infinite;
+  }
+
+@keyframes pillerPushUp {
+  0% , 40% , 100%{background-position: 0px 90px, 15px 78px, 30px 66px, 45px 58px, 60px 50px}
+  50% ,  90% {background-position: 0px 50px, 15px 58px, 30px 66px, 45px 78px, 60px 90px}
+}
+
+@keyframes ballStepUp {
+  0% {transform: translate(0, 0)}
+  5% {transform: translate(8px, -14px)}
+  10% {transform: translate(15px, -10px)}
+  17% {transform: translate(23px, -24px)}
+  20% {transform: translate(30px, -20px)}
+  27% {transform: translate(38px, -34px)}
+  30% {transform: translate(45px, -30px)}
+  37% {transform: translate(53px, -44px)}
+  40% {transform: translate(60px, -40px)}
+  50% {transform: translate(60px, 0)}
+  57% {transform: translate(53px, -14px)}
+  60% {transform: translate(45px, -10px)}
+  67% {transform: translate(37px, -24px)}
+  70% {transform: translate(30px, -20px)}
+  77% {transform: translate(22px, -34px)}
+  80% {transform: translate(15px, -30px)}
+  87% {transform: translate(7px, -44px)}
+  90% {transform: translate(0, -40px)}
+  100% {transform: translate(0, 0);}
+}
+
+    
+
